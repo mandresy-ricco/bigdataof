@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>RiskAnalyzer | Accidents</title>
+    <link rel="stylesheet" type="text/css" href="/public/src/css/style.css">
+    <link rel="icon" href="/public/assets/images/logo.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header class=" b-b bg-white">
+</header>
+
+<div class="fond-3">
+<div class="titletwo">Ajoutez un accident :</div>
+
+<main id="add">
+    <div>
+        <form class="login-form">
+            <label for="age">Age conducteur:</label>
+            <input type="text" id="age" name="age" placeholder="Entrez l'âge du conducteur"><br>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" placeholder="Entrez la date "><br>
+
+            <label for="heure">Heure</label>
+            <input type="time" id="heure" name="heure" placeholder="Entrez l'heure "><br>
+
+            <label for="ville">Ville</label>
+            <input type="text" id="ville" name="ville" placeholder="Entrez la ville "><br>
+
+            <label for="latitude">Latitude</label>
+            <input type="number" id="latitude" name="latitude" placeholder="Entrez la latitude "><br>
+
+            <label for="longitude">Longitude</label>
+            <input type="number" id="longitude" name="longitude" placeholder="Entrez la longitude "><br>
+
+            <label for="descr_athmo">Conditions athmosphériques</label>
+            <select id="descr_athmo" name="descr_athmo">
+                <option value="1">Non enregistrée</option>
+                <option value="2">Normale</option>
+                <option value="3">Pluie légère</option>
+                <option value="4">Pluie forte</option>
+                <option value="5">Neige-grêle</option>
+                <option value="6">Brouillard-fumée</option>
+                <option value="7">Vent fort-tempête</option>
+                <option value="8">Temps éblouissant</option>
+                <option value="9">Temps couvert</option>
+                <option value="10">Autre</option>
+            </select><br>
+
+            <label for="descr_lum">Lumière :</label>
+            <select id="descr_lum" name="descr_lum">
+                <option value="1">Plein jour</option>
+                <option value="2">Nuit avec éclairage public allumé</option>
+                <option value="3">Nuit sans éclairage public</option>
+                <option value="4">Crépuscule ou aube</option>
+                <option value="5">Nuit avec éclairage public non allumé</option>
+            </select><br>
+
+            <label for="descr_etat_surf">Surface :</label>
+            <select id="descr_etat_surf" name="descr_etat_surf">
+                <option value="1">Autre</option>
+                <option value="2">Boue</option>
+                <option value="3">Enneigée</option>
+                <option value="4">Flaques</option>
+                <option value="5">Inondée</option>
+                <option value="6">Mouillée</option>
+                <option value="7">Normale</option>
+                <option value="8">Verglacée</option>
+                <option value="9">Corps gras – huile</option>
+            </select><br>
+
+            <label for="descr_dispo_secu">Sécurité :</label>
+            <select id="descr_dispo_secu" name="descr_dispo_secu">
+                <option value="1">Autre - Non déterminable</option>
+                <option value="2">Autre - Non utilisé</option>
+                <option value="3">Autre - Utilisé</option>
+                <option value="4">Présence d'un casque - Utilisation non déterminable</option>
+                <option value="5">Présence d'un casque non utilisé</option>
+                <option value="6">Présence d'un dispositif enfant non utilisé</option>
+                <option value="7">Présence d'un équipement réfléchissant non utilisé</option>
+                <option value="8">Présence d'une ceinture de sécurité - Utilisation non déterminable</option>
+                <option value="9">Présence dispositif enfant - Utilisation non déterminable</option>
+                <option value="10">Présence équipement réfléchissant - Utilisation non déterminable</option>
+                <option value="11">Utilisation d'un casque</option>
+                <option value="12">Utilisation d'un dispositif enfant</option>
+                <option value="13">Utilisation d'un équipement réfléchissant</option>
+                <option value="14">Utilisation d'une ceinture de sécurité</option>
+                <option value="15">Présence de ceinture de sécurité non utilisée</option>
+            </select><br>
+
+            <label for="descr_cat_veh">Type de véhicule :</label>
+            <select id="descr_cat_veh" name="descr_cat_veh">
+                <option value="1">Autobus</option>
+                <option value="2">Autocar</option>
+                <option value="3">Autre véhicule</option>
+                <option value="4">Bicyclette</option>
+                <option value="5">Cyclomoteur &lt;50cm3</option>
+                <option value="6">Engin spécial</option>
+                <option value="7">Motocyclette > 125 cm3</option>
+                <option value="8">Motocyclette > 50 cm3 et <= 125 cm3</option>
+                <option value="9">PL > 3,5T + remorque</option>
+                <option value="10">PL seul > 7,5T</option>
+                <option value="11">Quad léger <= 50 cm3 (Quadricycle à moteur non carrossé)</option>
+                <option value="12">Quad lourd > 50 cm3 (Quadricycle à moteur non carrossé)</option>
+                <option value="13">Scooter < 50 cm3</option>
+                <option value="14">Scooter > 125 cm3</option>
+                <option value="15">Scooter > 50 cm3 et <= 125 cm3</option>
+                <option value="16">Tracteur agricole</option>
+                <option value="17">Tracteur routier + semi-remorque</option>
+                <option value="18">Tracteur routier seul</option>
+                <option value="19">Train</option>
+                <option value="20">Tramway</option>
+                <option value="21">VL seul</option>
+                <option value="22">Voiturette (Quadricycle à moteur carrossé)</option>
+                <option value="23">VU seul 1,5T <= PTAC <= 3,5T avec ou sans remorque</option>
+                <option value="24">PL seul 3,5T < PTAC <= 7,5T</option>
+                <option value="25">Voiturette (Quadricycle à moteur carrossé) (anciennement "voiturette ou tricycle à moteur")</option>
+            </select><br>
+
+            <label for="descr_agglo">Région :</label>
+            <select id="descr_agglo" name="descr_agglo">
+                <option value="1">Hors agglomération</option>
+                <option value="2">En agglomération</option>
+            </select><br>
+
+            <label for="descr_type_col">Type de collision :</label>
+            <select id="descr_type_col" name="descr_type_col">
+                <option value="1">Deux véhicules – Par le coté</option>
+                <option value="2">Autre collision</option>
+                <option value="3">Deux véhicules - Frontale</option>
+                <option value="4">Deux véhicules – Par l’arrière</option>
+                <option value="5">Sans collision</option>
+                <option value="6">Trois véhicules et plus – Collisions multiples</option>
+                <option value="7">Trois véhicules et plus – En chaîne</option>
+                <option value="8">Sans collision</option>
+            </select><br>
+
+
+            <button id="btn-add" type="submit">Ajouter</button>
+        </form>
+    </div>
+    <div>
+
+    </div>
+
+</main>
+</div>
+<footer class=" b-b bg-white">
+    <div class="flex flex-row justify-between  pb-1">
+        <div class="flex flex-row ">
+            <div class="ml-2 pt-1">
+                <img alt="" width="40" height="40" src="/public/assets/images/logo.svg">
+            </div>
+            <div class="flex flex-col">
+                <div class="text-2xl mt-1 ml-1">
+                    RiskAnalyzer
+                </div>
+                <div class="text-sm pl-1 italic">
+                    <div>Analyser</div>
+                    <div>Prédire</div>
+                    <div>Prévenir</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div  class="header-2">
+        <p>&copy; 2023 Groupe3. Tous droits réservés.</p>
+    </div>
+</footer>
+</body>
+</html>
+<script type="module" src="../js/main.js"></script>

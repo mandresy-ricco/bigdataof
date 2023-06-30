@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>RiskAnalyzer | Inscription</title>
+  <link rel="stylesheet" type="text/css" href="/public/src/css/style.css">
+  <link rel="icon" href="/public/assets/images/logo.svg" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+</header>
+<div class="fond-2 mb-fond">
+
+  <div class="title2">Inscrivez-vous afin de profiter de notre logiciel !</div>
+
+  <main id="inscription">
+    <div>
+      <form class="login-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Entrez votre email" required><br>
+
+        <label for="password">Mot de passe:</label>
+        <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required><br>
+
+        <button id="btn-signUp" type="submit" >S'inscrire</button>
+        <div  style="color: red;font-size: 15px; margin-top: 10px" hidden="hidden" id="avert">Adresse mail déjà utilisée ! </div>
+        <div class="mt-1" style="font-size: 14px">Vous avez un compte ? <a class="pt-2 pb-2 blue" href="connexion.html">Connectez-vous ici</a>.</div>
+      </form>
+    </div>
+
+    <div class="carre">
+      <ul>
+        <div style="font-size: 19px;font-weight: 510" class="" >Logiciel de prédiction des accidents de la route :</div><br>
+        <li class="mt-2">Renseignez une localisation et découvrez son cluster.</li>
+        <li class="mt-2">Renseignez des informations sur un accident et découvrez la gravité.</li>
+        <li class="mt-2">100% gratuit.</li>
+      </ul>
+    </div>
+
+  </main>
+</div>
+<footer class=" bg-white">
+  <div class="flex flex-row justify-between  pb-1">
+    <div class="flex flex-row ">
+      <div class="ml-2 pt-1">
+        <img width="40" height="40" src="/public/assets/images/logo.svg">
+      </div>
+      <div class="flex flex-col">
+        <div class="text-2xl mt-1 ml-1">
+          RiskAnalyzer
+        </div>
+        <div class="text-sm pl-1 italic">
+          <div>Analyser</div>
+          <div>Prédire</div>
+          <div>Prévenir</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div  class="header-2">
+    <p>&copy; 2023 Groupe3. Tous droits réservés.</p>
+  </div>
+</footer>
+</body>
+</html>
+<script type="module" src="../js/main.js"></script>

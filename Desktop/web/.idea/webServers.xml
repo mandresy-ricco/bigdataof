@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="aef0e706-7465-4661-976e-f3cbb888df6e" name="projets.isen-ouest.fr" url="http://etu826.projets.isen-ouest.fr">
+        <fileTransfer rootFolder="/var/www/etu826" accessType="SFTP" host="projets.isen-ouest.fr" port="22" sshConfigId="7d3e32fc-54fb-4e56-9e39-e2d71897460e" sshConfig="etu826@projets.isen-ouest.fr:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" isUseRsync="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

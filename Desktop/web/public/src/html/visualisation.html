@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>RiskAnalyzer | Cluster</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/public/src/css/style.css">
+
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { width: 80%;height: 800px;
+            margin-left: auto;margin-right: auto;margin-top: 50px}
+    </style>
+</head>
+<body>
+<header>
+</header>
+
+<div class="fond-3">
+
+<div  class="titletwo">Visualisation des accidents ! </div><br>
+
+    <div class="flex flex-row justify-end">
+        <div id="btn-switch" class="btn-switch" onclick="changerMessage()">
+            <div><div class='btn-de'><img width="25" height="25" src="https://img.icons8.com/ios/50/FFFFFF/list--v1.png" alt="list--v1"/><div>Liste</div></div></div>
+        </div>
+        <div  class="btn-switch" >
+            <a href="cluster.html"><div class='btn-de'><img width="25" height="25" src="https://img.icons8.com/ios/50/FFFFFF/artificial-intelligence.png" alt="artificial-intelligence"/><div>Cluster</div></div></a>
+        </div>
+    </div>
+
+<div  id="map"></div>
+
+<div  hidden="hidden" id="list" class="">
+
+    <table id="myTable" class="main-table mobile-optimised">
+        <thead>
+        <tr>
+            <th>Type de véhicule</th>
+            <th>Type de collision</th>
+            <th>Localisation</th>
+            <th>Ville</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Lumière</th>
+            <th>Age</th>
+            <th>Dispositif de sécurité</th>
+            <th>Condition atmosphériques</th>
+            <th>Etat route</th>
+            <th>Date/heure</th>
+            <th>Prédiction</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+</div>
+<footer class="bg-white">
+    <div class="flex flex-row justify-between  pb-1">
+        <div class="flex flex-row ">
+            <div class="ml-2 pt-1">
+                <img width="40" height="40" src="/public/assets/images/logo.svg">
+            </div>
+            <div class="flex flex-col">
+                <div class="text-2xl mt-1 ml-1">
+                    RiskAnalyzer
+                </div>
+                <div class="text-sm pl-1 italic">
+                    <div>Analyser</div>
+                    <div>Prédire</div>
+                    <div>Prévenir</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div  class="header-2">
+        <p>&copy; 2023 Groupe3. Tous droits réservés.</p>
+    </div>
+</footer>
+
+<script>
+
+</script>
+</body>
+</html>
+<script type="module" src="../js/main.js"></script>
+
+<script>
+    function changerMessage() {
+        let bouton = document.getElementById("btn-switch");
+        let list = document.getElementById("list");
+        let map = document.getElementById("map");
+
+        if (list.hidden) {
+            list.hidden = false;
+            map.hidden = true;
+            bouton.innerHTML = "" +
+                "<div class='btn-de'>" +
+                    "<img width=\"25\" height=\"25\" src=\"https://img.icons8.com/ios-filled/50/FFFFFF/map-marker--v1.png\" alt=\"map-marker--v1\"/>" +
+                    "<div>Maps</div>" +
+                "</div>" +
+                "";
+        } else {
+            list.hidden = true;
+            map.hidden = false;
+            bouton.innerHTML = "" +
+                "<div class='btn-de'>" +
+                "<img width=\"25\" height=\"25\" src=\"https://img.icons8.com/ios/50/FFFFFF/list--v1.png\" alt=\"list--v1\"/>" +
+                "<div>Liste</div>" +
+                "</div>";
+        }
+    }
+</script>
